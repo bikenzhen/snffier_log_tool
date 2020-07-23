@@ -5,11 +5,56 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-    <LinearLayout id="@+id/L1"
+    <LinearLayout android:id="@+id/L1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
-        <LinearLayout id="@+id/L2"
+        android:orientation="vertical"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp">
+        <LinearLayout android:id="@+id/L3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:text="Channel(No):"
+                android:textColor="@android:color/background_dark"/>
+
+            <Spinner
+                android:id="@+id/spinner_channel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:entries="@array/channel" />
+        </LinearLayout>
+        <LinearLayout android:id="@+id/L4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:text="Bandwidth(MHz): "
+                android:textColor="@android:color/background_dark" />
+
+            <Spinner
+                android:id="@+id/spinner_bandwith"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:entries="@array/bandwith" />
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/L2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
@@ -28,13 +73,18 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="scan" />
+            <Button
+                android:id="@+id/bt_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="del log" />
         </LinearLayout>
 
         <ListView
             android:id="@+id/lv"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <!--android:background="#8BC34A"-->
+            android:layout_height="match_parent"
+            android:layout_marginTop="16dp">
         </ListView>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

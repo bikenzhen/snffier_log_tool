@@ -60,19 +60,19 @@ public class WifiHelper {
 
             switch(item.channelWidth){
                 case 0:
-                    bandwith = "20MHZ";
+                    bandwith = "20 MHz";
                     break;
                 case 1:
-                    bandwith = "40MHZ";
+                    bandwith = "40 MHz";
                     break;
                 case 2:
-                    bandwith = "80MHZ";
+                    bandwith = "80 MHz";
                     break;
                 case 3:
-                    bandwith = "160MHZ";
+                    bandwith = "160 MHz";
                     break;
                 case 4:
-                    bandwith = "80+80MHZ";
+                    bandwith = "80+80 MHz";
                     break;
                 default:
                     bandwith = "Unknow Bandwith";
@@ -83,17 +83,17 @@ public class WifiHelper {
 
             if (item.channelWidth == 1) {
                 if (item.frequency < item.centerFreq0)
-                    bandwith = "[40MHZ-H]";
+                    bandwith = "40H MHz";
                 else
-                    bandwith = "[40MHZ-L]";
+                    bandwith = "40L MHz";
             }
 
             str.append("ssid: "+item.SSID+'\n')
                 .append("bssid: "+item.BSSID+'\n')
                 .append("rssi: "+String.valueOf(item.level)+'\n')
                 .append("channel: "+ch+" ("+String.valueOf(item.frequency)+") ")
-                .append(bandwith+" [")
-                .append(String.valueOf(item.centerFreq0)+'-')
+                .append("["+bandwith+"] [")
+                .append(String.valueOf(item.centerFreq0)+',')
                 .append(String.valueOf(item.centerFreq1)+"]\n")
                 .append(item.capabilities);
             apList.add(str.toString());
