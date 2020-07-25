@@ -22,7 +22,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="50"
-                android:text="Channel(No):"
+                android:text="@string/channel_no"
                 android:textColor="@android:color/background_dark"/>
 
             <Spinner
@@ -43,7 +43,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="50"
-                android:text="Bandwidth(MHz): "
+                android:text="@string/bandwidth_mhz"
                 android:textColor="@android:color/background_dark" />
 
             <Spinner
@@ -62,22 +62,22 @@
                 android:id="@+id/bt_start"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="start" />
+                android:text="@string/start" />
             <Button
                 android:id="@+id/bt_stop"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="stop" />
+                android:text="@string/stop" />
             <Button
                 android:id="@+id/bt_scan"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="scan" />
+                android:text="@string/scan" />
             <Button
                 android:id="@+id/bt_delete"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="del log" />
+                android:text="@string/del_log" />
         </LinearLayout>
 
         <ListView
